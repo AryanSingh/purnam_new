@@ -7335,7 +7335,9 @@ header.et-l--header .et_pb_menu__logo > img {
                                                 <h6 class="et_pb_contact_main_title">Apply Now</h6>
                                                 <div class="et-pb-contact-message"></div>
                                                 <div class="et_pb_contact">
-                                                    <form id="et_pb_contact_form" class="et_pb_contact_form clearfix"
+                                                    <form
+                                                    action="https://script.google.com/macros/s/AKfycbxJxzjc99Aw7Bz8JhY7Hl53jvePmghK458UTkIwJwIwziGMydf9HEjSuLx0sSz23nwwag/exec">
+                                                    id="et_pb_contact_form" class="et_pb_contact_form clearfix"
                                                     >
                                                         <p class="et_pb_contact_field et_pb_contact_field_0 et_pb_contact_field_half"
                                                            data-id="name" data-type="input">
@@ -7495,46 +7497,6 @@ header.et-l--header .et_pb_menu__logo > img {
                                                                                           name="_wp_http_referer"
                                                                                           value="/enquiry/"/>
                                                     </form>
-                                                    <script>
-                                                        const scriptURL ="https://script.google.com/macros/s/AKfycbyURS4QCHqZDs4ZDFMZdTFXMU8wh-OuMvQjdse0NW-9Q8yChovzU8EvWd5T6HVnFZRb7A/exec";
-                                                        const contactform = document.getElementById("et_pb_contact_form");
-
-                                                        contactform.addEventListener("submit", (e) => {
-                                                            e.preventDefault();
-
-                                                            // Get form data
-                                                            const formData = new FormData(contactform);
-
-                                                            // Convert to plain object (with your custom mapping)
-                                                            const data = {
-                                                                name: formData.get("et_pb_contact_name_0"),
-                                                                email: formData.get("et_pb_contact_email_0"),
-                                                                mobile: formData.get("et_pb_contact_mobile_0"),
-                                                                country: formData.get("et_pb_contact_country_0"),
-                                                                course: formData.get("et_pb_contact_course_name_0"),
-                                                                joining_month: formData.get("et_pb_contact_course_joining_month_0"),
-                                                                room_preference: formData.get("et_pb_contact_room_preference_0"),
-                                                                yoga_experience: formData.get("et_pb_contact_yoga_experience_0"),
-                                                                message: formData.get("et_pb_contact_message_0")
-                                                            };
-
-                                                            // Convert object → FormData again (so it bypasses CORS)
-                                                            const mappedFormData = new FormData();
-                                                            for (const key in data) {
-                                                                mappedFormData.append(key, data[key]);
-                                                            }
-
-                                                            fetch(scriptURL, {
-                                                                method: "POST",
-                                                                body: mappedFormData
-                                                            })
-                                                                .then(() => {
-                                                                    alert("Form submitted successfully!");
-                                                                    contactform.reset();
-                                                                })
-                                                                .catch(err => console.error("Error:", err));
-                                                        });
-                                                    </script>
 
 
                                                 </div>
