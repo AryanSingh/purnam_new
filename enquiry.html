@@ -5274,6 +5274,14 @@ jQuery(document).ready(function($) {
             main_footer.insertBefore(injected_footer, main_footer.firstChild);
     });
 </script>
+<script>
+	document.addEventListener("submit", function (e) {
+		if (e.target.classList.contains("et_pb_contact_form")) {
+			e.preventDefault();      // stop Divi AJAX
+			e.target.submit();       // native submit
+		}
+	}, true);
+</script>
 	<span class="et_pb_scroll_top et-pb-icon"></span>
 
 	<footer id="main-footer">

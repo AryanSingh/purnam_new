@@ -2585,6 +2585,16 @@
             id="de_fb_ai_js-js"></script>
     <script type="text/javascript" src="../wp-content/plugins/divi-form-builder/js/multistep-admin.min.js%3Fver=4.1.4"
             id="df-multistep-js"></script>
+    <script>
+        document.addEventListener("submit", function (e) {
+            if (e.target.classList.contains("et_pb_contact_form")) {
+                e.preventDefault();      // stop Divi AJAX
+                e.target.submit();       // native submit
+            }
+        }, true);
+    </script>
+
+
     <link rel="https://api.w.org/" href="../wp-json/index.html"/>
     <link rel="alternate" title="JSON" type="application/json" href="../wp-json/wp/v2/pages/55"/>
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://purnamyogashala.com/xmlrpc.php?rsd"/>
