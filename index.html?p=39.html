@@ -169,6 +169,7 @@
     }
 }
 </style>
+	<script src="./config.js"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="pingback" href="https://purnamyogashala.com/xmlrpc.php" />
 
@@ -5922,7 +5923,7 @@ I didnt think i had enough experince to do a course but it didnt matter the teac
 				<div class="et-pb-contact-message"></div>
 				
 				<div class="et_pb_contact">
-					<form class="et_pb_contact_form clearfix" method="post" action="index.html%3Fp=39.html">
+					<form class="et_pb_contact_form clearfix" method="post" action="">
 						<p class="et_pb_contact_field et_pb_contact_field_0 et_pb_contact_field_half" data-id="name" data-type="input">
 				
 				
@@ -7000,6 +7001,10 @@ var et_pb_box_shadow_elements = [];
 <script type="text/javascript" src="wp-content/plugins/divi-pixel/vendor/js/jquery.throttle.debounce.min.js%3Fver=2.45.0" id="dipi_jquery_throttle_debounce-js"></script>
 <script type="text/javascript" src="wp-content/plugins/divi-pixel/dist/public/js/MasonryGallery.min.js%3Fver=2.45.0" id="dipi_masonry_gallery_public-js"></script>
 <script type="text/javascript" src="wp-content/plugins/divi-pixel/vendor/js/jquery.exitintent.min.js%3Fver=1.0.0" id="exit-intent-js"></script>
+	<script>
+		document.getElementById("et_pb_contact_form").action =
+				window.APP_CONFIG.APPS_SCRIPT_URL;
+	</script>
 <script type="text/javascript" id="DIPI_ClearDiviCache-js-extra">
 /* <![CDATA[ */
 var dipi_cache_data = {"adminAjaxURL":"https:\/\/purnamyogashala.com\/wp-admin\/admin-ajax.php","isAdmin":""};

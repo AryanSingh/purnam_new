@@ -222,7 +222,7 @@ var de_formpayment_ajax_data = {"ajax_url":"https:\/\/purnamyogashala.com\/wp-ad
 <link rel='shortlink' href='index.html%3Fp=37.html' />
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="wp-json/oembed/1.0/embed%3Furl=https:%252F%252Fpurnamyogashala.com%252F100-hour-yoga-teacher-training-india%252F" />
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="wp-json/oembed/1.0/embed%3Furl=https:%252F%252Fpurnamyogashala.com%252F100-hour-yoga-teacher-training-india%252F&amp;format=xml" />
-
+<script src="./config.js"></script>
 <style>
 	.et_pb_text_15 {
 		font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
@@ -6243,7 +6243,7 @@ I didnt think i had enough experince to do a course but it didnt matter the teac
 				
 				<div class="et_pb_contact">
 					<form class="et_pb_contact_form
-					 clearfix" method="post" action="index.html%3Fp=37.html">
+					 clearfix" method="post" action="">
 						<p class="et_pb_contact_field et_pb_contact_field_9 et_pb_contact_field_half" data-id="name" data-type="input">
 				
 				
@@ -6812,5 +6812,9 @@ var et_pb_sticky_elements = {"et_pb_section_1_tb_header":{"id":"et_pb_section_1_
 		<script src='https://img1.wsimg.com/traffic-assets/js/tccl-tti.min.js' onload="window.tti.calculateTTI()"></script>
 			
 			<span class="et_pb_scroll_top et-pb-icon"></span>
+	<script>
+		document.getElementById("et_pb_contact_form").action =
+				window.APP_CONFIG.APPS_SCRIPT_URL;
+	</script>
 	</body>
 </html>
