@@ -65,6 +65,14 @@
             }
         ]
     }</script>
+    <script src="/config.js"></script>
+
+
+    <script>
+        document.getElementById("et_pb_contact_form").action =
+            window.APP_CONFIG.APPS_SCRIPT_URL;
+    </script>
+
     <script>
         document.addEventListener("submit", function (e) {
             if (e.target.classList.contains("et_pb_contact_form")) {
@@ -7345,8 +7353,7 @@ header.et-l--header .et_pb_menu__logo > img {
 
                                                 <div class="et_pb_contact">
                                                     <form id="et_pb_contact_form" class="et_pb_contact_form clearfix"
-                                                          method="post"
-                                                          action="https://script.google.com/macros/s/AKfycbzQpSCM0Ah1TC2KgLu_omDtQRQrM8QdPTdUeEvmfX8F-sVMSeX8mZlGSDBbiVNDC3O7ig/exec">
+                                                          method="post">
                                                     <p class="et_pb_contact_field et_pb_contact_field_0 et_pb_contact_field_half"
                                                        data-id="name" data-type="input">
 

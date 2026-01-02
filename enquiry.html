@@ -2726,6 +2726,7 @@ header.et-l--header .et_pb_menu__logo > img {
 }*/
 </style>
 <script type="text/javascript" id="dipi-logo-js">
+
 jQuery(document).ready(function($) {
 
     var currentLogoMode = '';
@@ -2872,7 +2873,14 @@ jQuery(document).ready(function($) {
 
 });
 </script>
-<style type="text/css" id="dipi-footer-styles">
+	<script src="/config.js"></script>
+
+	<script>
+		document.getElementById("et_pb_contact_form").action =
+				window.APP_CONFIG.APPS_SCRIPT_URL;
+	</script>
+
+	<style type="text/css" id="dipi-footer-styles">
 
   
   
@@ -4879,7 +4887,6 @@ jQuery(document).ready(function($) {
 
 					<form
 								method="post"
-								action="https://script.google.com/macros/s/AKfycbzQpSCM0Ah1TC2KgLu_omDtQRQrM8QdPTdUeEvmfX8F-sVMSeX8mZlGSDBbiVNDC3O7ig/exec"
 								id="et_pb_contact_form" class="et_pb_contact_form clearfix"
 						>
 							<p class="et_pb_contact_field et_pb_contact_field_0 et_pb_contact_field_half"
