@@ -4566,6 +4566,18 @@ jQuery(document).ready(function($) {
 		document.body.classList.add('dipi-dropdown-arrow');
 	});
 </script>
+	<script>
+		document.addEventListener("et_pb_contact_form_success", function (event) {
+			try {
+				const response = event.detail;
+				if (response && response.redirect) {
+					window.location.href = response.redirect;
+				}
+			} catch (e) {
+				console.error("Redirect failed", e);
+			}
+		});
+	</script>
 <meta name="google-site-verification" content="2CgkiclXc5t101FLJOSJyNfHEZYQrZW_pmgiR7yTr4o" />
 <meta name="p:domain_verify" content="3018777d97b1dac9aec9e300484dcb84"/>
 <!-- Google tag (gtag.js) -->

@@ -2580,15 +2580,15 @@
             window.APP_CONFIG.APPS_SCRIPT_URL;
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            jQuery(document).ajaxSuccess(function (event, xhr, settings) {
-                try {
-                    const response = JSON.parse(xhr.responseText);
-                    if (response.redirect) {
-                        window.location.href = response.redirect;
-                    }
-                } catch (e) {}
-            });
+        document.addEventListener("et_pb_contact_form_success", function (event) {
+            try {
+                const response = event.detail;
+                if (response && response.redirect) {
+                    window.location.href = response.redirect;
+                }
+            } catch (e) {
+                console.error("Redirect failed", e);
+            }
         });
     </script>
 
