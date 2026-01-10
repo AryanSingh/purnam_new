@@ -222,6 +222,20 @@
         document.getElementById("et_pb_contact_form").action =
             window.APP_CONFIG.APPS_SCRIPT_URL;
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            jQuery(document).ajaxSuccess(function (event, xhr, settings) {
+                try {
+                    const response = JSON.parse(xhr.responseText);
+                    if (response.redirect) {
+                        window.location.href = response.redirect;
+                    }
+                } catch (e) {}
+            });
+        });
+    </script>
+
+
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -7940,6 +7954,19 @@ header.et-l--header .et_pb_menu__logo > img {
     document.getElementById("et_pb_contact_form").action =
         window.APP_CONFIG.APPS_SCRIPT_URL;
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        jQuery(document).ajaxSuccess(function (event, xhr, settings) {
+            try {
+                const response = JSON.parse(xhr.responseText);
+                if (response.redirect) {
+                    window.location.href = response.redirect;
+                }
+            } catch (e) {}
+        });
+    });
+</script>
+
 <script type="text/javascript" id="divi-custom-script-js-extra">
     /* <![CDATA[ */
     var DIVI = {"item_count": "%d Item", "items_count": "%d Items"};

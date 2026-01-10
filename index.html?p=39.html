@@ -7005,7 +7005,20 @@ var et_pb_box_shadow_elements = [];
 		document.getElementById("et_pb_contact_form").action =
 				window.APP_CONFIG.APPS_SCRIPT_URL;
 	</script>
-<script type="text/javascript" id="DIPI_ClearDiviCache-js-extra">
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			jQuery(document).ajaxSuccess(function (event, xhr, settings) {
+				try {
+					const response = JSON.parse(xhr.responseText);
+					if (response.redirect) {
+						window.location.href = response.redirect;
+					}
+				} catch (e) {}
+			});
+		});
+	</script>
+
+	<script type="text/javascript" id="DIPI_ClearDiviCache-js-extra">
 /* <![CDATA[ */
 var dipi_cache_data = {"adminAjaxURL":"https:\/\/purnamyogashala.com\/wp-admin\/admin-ajax.php","isAdmin":""};
 /* ]]> */

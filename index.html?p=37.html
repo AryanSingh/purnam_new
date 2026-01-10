@@ -6816,5 +6816,18 @@ var et_pb_sticky_elements = {"et_pb_section_1_tb_header":{"id":"et_pb_section_1_
 		document.getElementById("et_pb_contact_form").action =
 				window.APP_CONFIG.APPS_SCRIPT_URL;
 	</script>
-	</body>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			jQuery(document).ajaxSuccess(function (event, xhr, settings) {
+				try {
+					const response = JSON.parse(xhr.responseText);
+					if (response.redirect) {
+						window.location.href = response.redirect;
+					}
+				} catch (e) {}
+			});
+		});
+	</script>
+
+</body>
 </html>
